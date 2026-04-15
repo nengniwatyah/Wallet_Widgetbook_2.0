@@ -33,7 +33,7 @@ Bottom-sheet drawer for showing a balance summary and warning state.
   - Padding: `16`
   - Label: `Total Balance`
   - Amount color: `success/400`
-  - Divider: `stroke/base/600`
+  - Divider: `stroke/base/300`
 
 ### Warning
 - Uses `AnnouncementWarning`

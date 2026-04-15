@@ -261,7 +261,7 @@ class DrawerBalanceDetail extends StatelessWidget {
                                   height: 1,
                                   color: theme.ThemeColors.get(
                                     brightnessKey,
-                                    'stroke/base/600',
+                                    'stroke/base/300',
                                   ),
                                 ),
                                 const SizedBox(height: 16),

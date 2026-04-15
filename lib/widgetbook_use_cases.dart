@@ -168,7 +168,11 @@ Widget buildButtonAmount(BuildContext context) {
 
 @widgetbook.UseCase(name: 'Disabled', type: Buttons)
 Widget buildButtonDisabled(BuildContext context) {
-  return const Buttons(text: 'Disabled Button', enabled: false);
+  return const Buttons(
+    text: 'Secondary Disabled',
+    type: ButtonType.secondary,
+    enabled: false,
+  );
 }
 
 // Card

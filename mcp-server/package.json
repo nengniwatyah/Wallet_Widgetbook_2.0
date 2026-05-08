@@ -1,14 +1,14 @@
 {
-    "name": "wi-wallet-design-system-mcp",
-    "version": "1.0.0",
-    "description": "MCP Server for Wi_Wallet Design System",
+    "name": "figma-widget-mcp",
+    "version": "2.0.0",
+    "description": "Figma Widget MCP — Figma-to-Flutter + Widgetbook code generation for Wi Wallet",
     "type": "module",
     "scripts": {
         "start": "node index.js",
         "install-mcp": "node install.js"
     },
     "dependencies": {
-        "@modelcontextprotocol/sdk": "^0.6.0",
+        "@modelcontextprotocol/sdk": "^1.0.0",
         "zod": "^3.22.4"
     }
 }

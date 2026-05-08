@@ -5,8 +5,10 @@ import 'package:mcp_test_app/widgets/item_list/item_list.dart';
 import 'package:mcp_test_app/config/themes/theme_color.dart';
 import 'package:mcp_test_app/widgets/announce/announcement.dart';
 import 'package:mcp_test_app/widgets/announce/announcement_warning.dart';
+import 'package:mcp_test_app/widgets/announce/announcement_danger.dart';
 import 'package:mcp_test_app/widgets/button/buttons.dart';
 import 'package:mcp_test_app/widgets/card/card_review_transaction.dart';
+import 'package:mcp_test_app/widgets/receipt/receipt_component.dart';
 import 'package:mcp_test_app/widgets/input/full_amount_input.dart';
 import 'package:mcp_test_app/widgets/input/mobile_code_input.dart';
 import 'package:mcp_test_app/widgets/input/search_input.dart';
@@ -142,6 +144,18 @@ Widget buildAnnouncementWarning(BuildContext context) {
   );
 }
 
+@widgetbook.UseCase(name: 'Default', type: AnnouncementDanger)
+Widget buildAnnouncementDanger(BuildContext context) {
+  return const Padding(
+    padding: EdgeInsets.all(16.0),
+    child: AnnouncementDanger(
+      title: 'Action required: Verification failed',
+      description:
+          'Your profile verification could not be completed. Please re-upload your document to continue.',
+    ),
+  );
+}
+
 // Buttons
 @widgetbook.UseCase(name: 'Primary', type: Buttons)
 Widget buildButtonPrimary(BuildContext context) {
@@ -193,6 +207,34 @@ Widget buildCardReviewTransaction(BuildContext context) {
     accountNumberValue: '123-4-56789-0',
     dateLabel: 'Date&Time',
     dateValue: '06 Oct 2025 12:00',
+  );
+}
+
+@widgetbook.UseCase(name: 'Default', type: ReceiptComponent)
+Widget buildReceiptComponent(BuildContext context) {
+  return const Padding(
+    padding: EdgeInsets.all(16),
+    child: ReceiptComponent(
+      amount: '500,000,000.00 THB',
+      fee: 'Fees 5.00 THB',
+      senderName: 'Victor Von Doom',
+      senderAccount: 'x-1234',
+      merchantName: 'Merchant 1',
+      dateTime: '2025-10-06 12:00:53',
+      transactionId: 'WP12345678901234567890',
+      merchantRefId: 'WP12345678901234567890',
+      billerId: 'WP12345678901234567890',
+      ref1: 'WP12345678901234567890',
+      footerNoteOne:
+          'Please verify the information and keep the slip for evidence.',
+      footerNoteTwo:
+          'Customer service contact 02-026-6679 operates 24 hours daily.',
+      checkIconAssetPath: 'lib/assets/images/receipt/check.svg',
+      senderLogoAssetPath: 'lib/assets/images/brands=SCB.svg',
+      qrAssetPath: 'lib/assets/images/receipt/qr.png',
+      backgroundSvgAssetPath:
+          'lib/assets/images/receipt/receipt_background.svg',
+    ),
   );
 }
 
